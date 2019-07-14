@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <table class="table table-sm">
+        <thead>
+            <tr>
+            <th> </th>
+                {% for l in s2 %}
+                    <th>{{l}}</th>
+                {% endfor %}
+            </th>
+        </thead>
+        <tbody>
+            {% for d in matrix %}
+                <tr>
+                    <th>
+                        {{s1[loop.index - 1]}}
+                    </th>
+                    {% for t in d %}
+                        <td>{{t[0]}}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
